@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolo del prezzo del biglietto del treno</title>
 </head>
+
 <body>
-    
+
+    <!-- creo un form -->
+    <form id="ask-user" action="index.html">
+        
+        <!-- creo un ipotetico titolo del sito -->
+        <div>
+            <h2>Benvenuto su</h2>
+            <h1>TreniBoolean</h1>
+            <h3>Compila i seguenti campi per ottenere il tuo biglietto!</h3>
+        </div>
+
+
+        <!-- creo il campo di inserimento del nome -->
+        <input id="input-name" type="text" placeholder="Inserisci il tuo nome">
+
+        <!-- creo il campo di inserimento numerico per i km -->
+        <input id="input-km" type="number" placeholder="Inserisci i chilometri">
+
+        <!-- creo il campo di inserimento numerico per l'età -->
+        <input id="input-age" type="number" placeholder="Inserisci l'età">
+
+        <!-- creo il pulsante per inviare i dati dell'utente -->
+        <button>Invia</button>
+    </form>
 
     <!-- main js -->
-     <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
