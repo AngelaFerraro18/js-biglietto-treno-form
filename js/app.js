@@ -38,16 +38,46 @@ askUserElement.addEventListener('submit',
         //creo un nuovo elemento h2 
         const createNewTitle = document.createElement('h2');
         createNewTitle.innerText = `Ecco il tuo biglietto, ${nameElement.value}!`;
-        //lo inserisco nella pagina
-        askUserElement.append(createNewTitle);
 
         // creo un elemento paragrafo in cui inserisco il prezzo del biglietto
         const createNewParagraf = document.createElement('p');
         createNewParagraf.innerText = `Costo: ${ticketPrice.toFixed(2)}€`;
-        // lo inserisco in pagina
-        askUserElement.append(createNewParagraf);
+      
+        // creo un div 
+        const detailsTicketElement = document.createElement('div');
+     
+        //inserisco gli elementi h2 e p nel div
+        detailsTicketElement.append(createNewTitle);
+        detailsTicketElement.append(createNewParagraf);
+
+        // inserisco il div in pagina
+        askUserElement.append(detailsTicketElement);
+
+        const printButtonElement = document.createElement('button');
+        printButtonElement.innerHTML = '<i class="bi bi-printer"> Stampa</i>';
+        askUserElement.appendChild(printButtonElement);
+
+        const cancelButtonElement = document.createElement('button');
+        cancelButtonElement.innerHTML = '<i class="bi bi-x-circle"> Annulla</i>';
+        askUserElement.appendChild(cancelButtonElement);
+
+        const divButtonsElement = document.createElement('div');
+
+        divButtonsElement.append(printButtonElement);
+        divButtonsElement.append(cancelButtonElement);
+
+        askUserElement.append(detailsTicketElement, divButtonsElement);
+
+        // lavoro sullo stile degli elementi aggiunti nella pagina
+        createNewTitle.classList.add('text-center', 'fs-4');
+        createNewParagraf.classList.add('text-center', 'fs-5');
+        detailsTicketElement.classList.add('bg-info', 'p-5', 'border', 'rounded', 'border-2', 'border-light', 'mb-3');
+        printButtonElement.classList.add('btn', 'btn-outline-primary', 'mx-3');
+        cancelButtonElement.classList.add('btn', 'btn-outline-danger');
+        divButtonsElement.classList.add('d-flex', 'justify-content-center');  
 
     }
 )
 
 
+ 
