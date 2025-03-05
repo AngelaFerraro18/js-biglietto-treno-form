@@ -1,0 +1,3 @@
+# Calcolo del biglietto del treno...questa volta aggiungendo un Form!
+
+Prendendo come spunto un esercizio precedente, nello specifico quello dove era necessario calcolare il prezzo di un biglietto del treno che si basava sul chilometraggio che l'utente che voleva percorrere e la sua età. Infatti, se rientrava in determinate categorie, avrebbe avuto diritto ad uno sconto sul prezzo del biglietto. Visto a lezione il comportamento del form, obiettivo di oggi è usarlo per capirne il comportamento e usare un modo diverso di chiedere dati ad un utente.
