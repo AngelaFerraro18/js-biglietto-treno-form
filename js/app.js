@@ -1,6 +1,5 @@
 //salvo in una variabile il valore del form
 const askUserElement = document.getElementById('ask-user');
-console.log(askUserElement);
 
 //salvo in una variabile il valore che sarà il nome dell'utente
 const nameElement = document.getElementById('input-name');
@@ -39,8 +38,21 @@ askUserElement.addEventListener('submit',
         let discount = (ticketPrice * discountPercentage) / 100;
 
         ticketPrice -= discount;
-
+        ticketPrice.toFixed(2);
         console.log(ticketPrice.toFixed(2));
 
+        //creo un nuovo elemento h2 
+        const createNewTitle = document.createElement('h2');
+        createNewTitle.innerText = `Ecco il tuo biglietto, ${nameElement.value}!`;
+        //lo inserisco nella pagina
+        askUserElement.append(createNewTitle);
+
+        // creo un elemento paragrafo in cui inserisco il prezzo del biglietto
+        const createNewParagraf = document.createElement('p');
+        createNewParagraf.innerText = `Costo: ${ticketPrice.toFixed(2)}€`;
+        // lo inserisco in pagina
+        askUserElement.append(createNewParagraf);
     }
 )
+
+
