@@ -15,10 +15,6 @@ askUserElement.addEventListener('submit',
     function(event){
         event.preventDefault();
 
-        console.log(nameElement.value);
-        console.log(kmElement.value);
-        console.log(ageElement.value);
-
         //converto i dati: km ed età in numero
         const userKm = parseInt(kmElement.value);
         const userAge = parseInt(ageElement.value);
@@ -26,7 +22,7 @@ askUserElement.addEventListener('submit',
         //procedo con il calcolo del costo del biglietto in tutte le sue circostanze
         const kmPrice = 0.21;
         let ticketPrice = userKm * kmPrice;
-        console.log(ticketPrice);
+       
         let discountPercentage = 0;
 
         if (userAge < 18){
@@ -38,9 +34,7 @@ askUserElement.addEventListener('submit',
         let discount = (ticketPrice * discountPercentage) / 100;
 
         ticketPrice -= discount;
-        ticketPrice.toFixed(2);
-        console.log(ticketPrice.toFixed(2));
-
+       
         //creo un nuovo elemento h2 
         const createNewTitle = document.createElement('h2');
         createNewTitle.innerText = `Ecco il tuo biglietto, ${nameElement.value}!`;
@@ -52,6 +46,7 @@ askUserElement.addEventListener('submit',
         createNewParagraf.innerText = `Costo: ${ticketPrice.toFixed(2)}€`;
         // lo inserisco in pagina
         askUserElement.append(createNewParagraf);
+
     }
 )
 
